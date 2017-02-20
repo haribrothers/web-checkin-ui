@@ -1,0 +1,10 @@
+<div class="accordion-group" [class.accordion-group-open]="isOpen">
+  <div class="accordion-group-heading" (click)="toggleOpen($event)">
+    <h4 class="accordion-group-title">
+      <a href tabindex="0"><span>{{title}}</span></a>
+    </h4>
+  </div>
+  <div class="accordion-body" >
+    <ng-content></ng-content>
+  </div>
+</div>

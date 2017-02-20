@@ -1,0 +1,95 @@
+@import '@angular/material/core/style/variables';
+
+$mat-medium: 'max-width: 1280px';
+
+.bubble-progress-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+ul.bubble-progress {
+  display: table;
+  width: 100%;
+  
+  vertical-align: middle;
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  >li.progress-element {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    >.bubble {
+      width: 20px;
+      height: 20px;
+      background-color: #DDD;
+      border-radius: 50%;
+      font-size: 8px;
+      position: absolute;
+      top:0;
+      left:0;
+      
+    }
+    >.progress-line {
+      height: 2px;
+      vertical-align: middle;
+      background-color: #DDD;
+      margin-top: 9px;
+    }
+    &:last-child {
+      width: 20px;
+      >.progress-line {
+        display: none;
+      }
+      &.active >.bubble {
+        left: -10px;
+      } 
+    }
+    &.visited {
+      >.bubble {
+        background-color: #2C73AA;
+        cursor: pointer;
+        &:hover{
+          background-color: lighten(#2C73AA,20);
+        }
+      }
+      >.progress-line {
+        background-color: #2C73AA;
+      }
+    }
+    // &:first-child{
+    //   &.active >.bubble {
+    //     left: 0;
+    //   }
+    // }
+    &.active {
+      >.bubble {
+        background-image: url('./assets/images/plane.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border-radius: 0;
+        width: 30px;
+        height: 30px;
+        top: -5px;
+        left: 0;
+      }
+    }
+  }
+}
+
+
+
+// @media ($mat-medium) {
+//   .bubble-progress-container {
+//     width: 75%;
+//   }
+// }
+// @media ($mat-small) {
+//   .bubble-progress-container {
+//     width: 100%;
+//   }
+// }

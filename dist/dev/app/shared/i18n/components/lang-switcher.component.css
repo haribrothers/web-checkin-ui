@@ -1,0 +1,40 @@
+md-toolbar .mat-select.toolbar-select .mat-select-trigger {
+  border-bottom: none; }
+  md-toolbar .mat-select.toolbar-select .mat-select-trigger .mat-select-value {
+    padding-left: 5px;
+    top: 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 25px; }
+
+md-toolbar .mat-select .mat-select-trigger {
+  min-width: 100px;
+  height: 25px; }
+
+md-toolbar .mat-select {
+  float: right;
+  background-color: #FFF;
+  border-width: 1; }
+
+@media (max-width: 600px) {
+  md-toolbar .mat-select.toolbar-select .mat-select-trigger .mat-select-value {
+    color: #FFF; }
+  md-toolbar .mat-select.toolbar-select .mat-select-trigger .mat-select-arrow {
+    color: #FFF;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid;
+    margin: 0 4px; }
+  md-toolbar .mat-select.toolbar-select .mat-select-trigger .mat-select-underline {
+    height: 0; }
+  md-toolbar .mat-select:focus:not(.mat-select-disabled) .mat-select-arrow {
+    color: #FFF; }
+  md-toolbar .mat-select {
+    float: right;
+    background-color: transparent;
+    border-width: 0; }
+  md-toolbar .mat-select .mat-select-trigger {
+    min-width: 50px;
+    height: 25px; } }
+
+/*# sourceMappingURL=app/shared/i18n/components/lang-switcher.component.css.map */

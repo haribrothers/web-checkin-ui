@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2 class="page-title">Flight Reservation</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="2" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container xsmall">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <md-input-container>
+        <input md-input placeholder="First name">
+      </md-input-container>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
+      <md-input-container>
+        <input md-input placeholder="Last name">
+      </md-input-container>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+      <md-input-container>
+        <input md-input placeholder="Old name">
+      </md-input-container>
+    </div>
+  </div>
+</div>
+<div class="hr-dashed"></div>
+<div class="container xsmall centered">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <p class="label-info">Enter exactly as it appears on the Reservation</p>
+    </div>
+  </div>
+</div>
+<div class="container centered">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <button md-raised-button color="primary" [routerLink]="'joinmiles'">Find Reservations</button>
+    </div>
+  </div>
+
+</div>
+<!--<form (submit)="addName()">
+  <input [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
+  <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
+</form>
+<ul>
+  <li *ngFor="let name of (names$ | async)">{{name}}</li>
+</ul>
+<a *ngFor="let name of sample" class="link">{{name}}</a>
+<p>
+  <a class="link" (click)="readAbout()">About - RouterExtensions example</a>
+</p>-->

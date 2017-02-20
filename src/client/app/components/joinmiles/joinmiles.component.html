@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2 class="page-title">Join ConnectMiles Now</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="2" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+
+<accordion [isMultiExpand]="true">
+  <accordion-group title="Basic Information" [isOpen]="true" (onOpen)="onFirstOpen($event)" (onClose)="onFirstClose($event)">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="First name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Last name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Old name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Old name">
+        </md-input-container>
+      </div>
+    </div>
+  </accordion-group>
+
+  <accordion-group title="Security information" [isOpen]="true" (onOpen)="onFirstOpen($event)" (onClose)="onFirstClose($event)">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="First name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Last name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Old name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Old name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Old name">
+        </md-input-container>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-input-container>
+          <input md-input placeholder="Old name">
+        </md-input-container>
+      </div>
+
+    </div>
+  </accordion-group>
+
+    <accordion-group title="Additional information" [isOpen]="true" (onOpen)="onFirstOpen($event)" (onClose)="onFirstClose($event)">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-radio-group>
+          <label>Do you have a promotional code?</label>
+          <md-radio-button value="1">No</md-radio-button>
+          <div class="seperator-space"></div>
+          <md-radio-button value="2">Yes</md-radio-button>
+        </md-radio-group>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+        <md-radio-group>
+          <label>Do you have a preassigned ConnectMiles Card?</label>
+          <md-radio-button color="primary" value="1">No</md-radio-button>
+          <div class="seperator-space"></div>
+          <md-radio-button value="2">Yes</md-radio-button>
+        </md-radio-group>
+      </div>
+    </div>
+  </accordion-group>
+</accordion>

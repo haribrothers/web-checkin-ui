@@ -1,0 +1,51 @@
+$accordion-back-color: #D9D8D7;
+$accordion-border-color: #CCC;
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property,
+  $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+
+:host {
+  display: block;
+  border: 1px solid $accordion-back-color;
+}
+
+.accordion-group {
+  // padding-bottom: 5px;
+  .accordion-body {
+    display: none;
+    // max-height: 0;
+    // overflow: hidden;
+    // transition: all 1s linear; 
+  }
+  &.accordion-group-open {
+    // border-bottom: none;
+    .accordion-body {
+      display: block;
+      // max-height: 2000px;
+    }
+  }
+  .accordion-group-heading {
+    padding: 8px 16px;
+    background-color: $accordion-back-color;
+    border-bottom: 1px solid $accordion-border-color;
+    .accordion-group-title {
+      margin: 0;
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 300;
+        &:focus {
+          outline: none;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

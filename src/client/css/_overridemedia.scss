@@ -1,0 +1,25 @@
+@import '@angular/material/core/style/variables';
+@import '@angular/material/toolbar/toolbar-variables';
+
+
+
+@mixin web-container-height($height) { //set web container toppadding for fixed header
+  .web {
+    padding-top: $height * 2;
+  }
+}
+.web{
+  position: relative;
+  padding-bottom: 52px;
+  // background-color: #EEE;
+}
+@include web-container-height($mat-toolbar-height-desktop); // set default style
+
+@media ($mat-xsmall) and (orientation: portrait) {
+  @include web-container-height($mat-toolbar-height-mobile-portrait);
+}
+
+// Specific height for mobile devices in landscape mode.
+@media ($mat-small) and (orientation: landscape) {
+  @include web-container-height($mat-toolbar-height-mobile-landscape);
+}

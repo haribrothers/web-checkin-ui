@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  border: 1px solid #D9D8D7; }
+
+.accordion-group .accordion-body {
+  display: none; }
+
+.accordion-group.accordion-group-open .accordion-body {
+  display: block; }
+
+.accordion-group .accordion-group-heading {
+  padding: 8px 16px;
+  background-color: #D9D8D7;
+  border-bottom: 1px solid #CCC; }
+  .accordion-group .accordion-group-heading .accordion-group-title {
+    margin: 0; }
+    .accordion-group .accordion-group-heading .accordion-group-title a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 300; }
+      .accordion-group .accordion-group-heading .accordion-group-title a:focus {
+        outline: none;
+        font-weight: 700; }
+
+/*# sourceMappingURL=app/shared/copa-wci/components/accordion.component.css.map */

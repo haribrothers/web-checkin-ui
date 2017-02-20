@@ -1,0 +1,64 @@
+@import '@angular/material/core/style/variables';
+//varibale decleration
+$select-color: #FFF !default;
+$back-color: #FFF !default;
+
+@mixin toolbar-select-box($backcolor, $border) {
+  md-toolbar .mat-select {
+    float: right;
+    background-color: $backcolor;
+    border-width: $border;
+  }
+}
+
+@mixin toolbar-select-box-height($height, $width) {
+  md-toolbar .mat-select .mat-select-trigger {
+    min-width: $width;
+    height: $height;
+  }
+}
+
+md-toolbar {
+  .mat-select.toolbar-select .mat-select-trigger {
+    border-bottom: none;
+    .mat-select-value {
+      padding-left: 5px;
+      top: 0;
+      text-transform: capitalize;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+}
+
+//default settings
+@include toolbar-select-box-height(25px, 100px);
+@include toolbar-select-box($back-color, 1);
+//override for mobile screens
+@media ($mat-xsmall) {
+  md-toolbar {
+    .mat-select {
+      &.toolbar-select .mat-select-trigger {
+        .mat-select-value {
+          color: $select-color;
+          // top: 2px;
+        }
+        .mat-select-arrow {
+          color: $select-color;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid;
+          margin: 0 4px;
+        }
+        .mat-select-underline {
+          height: 0;
+        }
+      }
+      &:focus:not(.mat-select-disabled) .mat-select-arrow {
+        color: $select-color
+      }
+    }
+  }
+  @include toolbar-select-box(transparent, 0);
+  @include toolbar-select-box-height(25px, 50px);
+}

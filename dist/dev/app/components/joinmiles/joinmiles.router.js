@@ -1,0 +1,10 @@
+"use strict";
+var joinmiles_component_1 = require("./joinmiles.component");
+exports.JoinMiles = [
+    {
+        path: 'joinmiles',
+        component: joinmiles_component_1.JoinmilesComponent
+    }
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9jb21wb25lbnRzL2pvaW5taWxlcy9qb2lubWlsZXMucm91dGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSw2REFBMkQ7QUFFOUMsUUFBQSxTQUFTLEdBQWU7SUFDbkM7UUFDRSxJQUFJLEVBQUUsV0FBVztRQUNqQixTQUFTLEVBQUUsd0NBQWtCO0tBQzlCO0NBQ0YsQ0FBQyIsImZpbGUiOiJhcHAvY29tcG9uZW50cy9qb2lubWlsZXMvam9pbm1pbGVzLnJvdXRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEpvaW5taWxlc0NvbXBvbmVudCB9IGZyb20gJy4vam9pbm1pbGVzLmNvbXBvbmVudCc7XG5cbmV4cG9ydCBjb25zdCBKb2luTWlsZXM6IEFycmF5PGFueT4gPSBbXG4gIHtcbiAgICBwYXRoOiAnam9pbm1pbGVzJyxcbiAgICBjb21wb25lbnQ6IEpvaW5taWxlc0NvbXBvbmVudFxuICB9XG5dO1xuIl19

@@ -1,0 +1,14 @@
+<div class="bubble-progress-container">
+  <ul class="bubble-progress">
+    <li class="progress-element"  *ngFor="let item of items;let i = index" [class.visited]="i<index" [class.active]="i==index">
+      <div class="bubble"></div>
+      <div class="progress-line"></div>
+    </li>
+<!--
+    <li class="progress-element visited"><div class="bubble"></div><div class="progress-line"></div></li>
+    <li class="progress-element active"><div class="bubble"></div><div class="progress-line"></div></li>
+    <li class="progress-element"><div class="bubble"></div><div class="progress-line"></div></li>
+    <li class="progress-element visited"><div class="bubble"></div><div class="progress-line"></div></li>
+    <li class="progress-element active"><div class="bubble"></div><div class="progress-line"></div></li>-->
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+:host {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #343434;
+    padding-left: 16px;
+    color: #FFF;
+}
+
+:host > p{
+    font-size: 14px;
+    font-weight: 300;
+}

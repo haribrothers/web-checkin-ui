@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/components/home/home.component.tns.scss"],"names":[],"mappings":"AAAA;EACE,cAAa;EACb,kBAAiB;EACjB,cAAa;EACb,gBAAe,EAChB","file":"home.component.tns.css","sourcesContent":[".love-tech {\n  font-size: 28;\n  font-weight: bold;\n  color: purple;\n  margin: 8 0 8 0;\n}\n"]}

@@ -1,0 +1,7 @@
+<form>
+  <md-select class="toolbar-select" [(ngModel)]="lang" name="lang">
+    <md-option *ngFor="let l of supportedLanguages;let i =index" [value]="l.code" (onSelect)="changeLang(i,l.code)" >
+      {{l.code}}
+    </md-option>
+  </md-select>
+</form>

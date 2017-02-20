@@ -1,0 +1,57 @@
+.bubble-progress-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 960px; }
+
+ul.bubble-progress {
+  display: table;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 0;
+  margin-bottom: 20px; }
+  ul.bubble-progress > li.progress-element {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative; }
+    ul.bubble-progress > li.progress-element > .bubble {
+      width: 20px;
+      height: 20px;
+      background-color: #DDD;
+      border-radius: 50%;
+      font-size: 8px;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    ul.bubble-progress > li.progress-element > .progress-line {
+      height: 2px;
+      vertical-align: middle;
+      background-color: #DDD;
+      margin-top: 9px; }
+    ul.bubble-progress > li.progress-element:last-child {
+      width: 20px; }
+      ul.bubble-progress > li.progress-element:last-child > .progress-line {
+        display: none; }
+      ul.bubble-progress > li.progress-element:last-child.active > .bubble {
+        left: -10px; }
+    ul.bubble-progress > li.progress-element.visited > .bubble {
+      background-color: #2C73AA;
+      cursor: pointer; }
+      ul.bubble-progress > li.progress-element.visited > .bubble:hover {
+        background-color: #65a5d7; }
+    ul.bubble-progress > li.progress-element.visited > .progress-line {
+      background-color: #2C73AA; }
+    ul.bubble-progress > li.progress-element.active > .bubble {
+      background-image: url("./assets/images/plane.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border-radius: 0;
+      width: 30px;
+      height: 30px;
+      top: -5px;
+      left: 0; }
+
+/*# sourceMappingURL=app/shared/copa-wci/components/bubble-progress.component.css.map */
