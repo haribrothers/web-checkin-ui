@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/components/terms/terms.component.scss"],"names":[],"mappings":"AAAA;EACI,kBACJ,EAAE","file":"terms.component.css","sourcesContent":[".agree{\r\n    padding-left: 1em\r\n}"]}

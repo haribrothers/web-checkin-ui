@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2 class="page-title">FLIGHT AND PASSENGER INFORMATION</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="2" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+    <div>
+      <label id="reservation">Reservation Number: </label><label>HQWR80</label>
+    </div>
+    </div>
+  </div>
+</div>
+
+  <div class="flight-list">
+    <div class="details-table">
+      <div class="table-row">
+        <div class="table-col">CM627</div>
+        <div class="table-col-auto">On Time</div>
+      </div>
+    </div>
+    <div class="details-table">
+      <div class="table-row">
+        <div class="table-col">Fri 11 Nov 16</div>
+      </div>
+    </div>
+    <div class="details-table">
+      <div class="table-row">
+        <div class="table-col-auto">
+          <div>Panama City</div>
+          <div>PTY</div>
+          <div>9:28AM</div>
+        </div>
+        <div class="table-col-auto">
+          <img id="Plane" src="./assets/plane.png" title="Plane" alt="Plane">
+        </div>
+        <div class="table-col-auto">
+          <div>Mexico
+          </div>
+          <div>MEX</div>
+          <div>Fri 11 Nov 16</div>
+        </div>
+      </div>
+    </div>
+  </div>

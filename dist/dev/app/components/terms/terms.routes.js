@@ -1,0 +1,10 @@
+"use strict";
+var terms_component_1 = require("./terms.component");
+exports.TermsRoutes = [
+    {
+        path: 'terms',
+        component: terms_component_1.TermsComponent
+    }
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9jb21wb25lbnRzL3Rlcm1zL3Rlcm1zLnJvdXRlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEscURBQW1EO0FBRXRDLFFBQUEsV0FBVyxHQUFlO0lBQ3JDO1FBQ0UsSUFBSSxFQUFFLE9BQU87UUFDYixTQUFTLEVBQUUsZ0NBQWM7S0FDMUI7Q0FDRixDQUFDIiwiZmlsZSI6ImFwcC9jb21wb25lbnRzL3Rlcm1zL3Rlcm1zLnJvdXRlcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFRlcm1zQ29tcG9uZW50IH0gZnJvbSAnLi90ZXJtcy5jb21wb25lbnQnO1xyXG5cclxuZXhwb3J0IGNvbnN0IFRlcm1zUm91dGVzOiBBcnJheTxhbnk+ID0gW1xyXG4gIHtcclxuICAgIHBhdGg6ICd0ZXJtcycsXHJcbiAgICBjb21wb25lbnQ6IFRlcm1zQ29tcG9uZW50XHJcbiAgfVxyXG5dOyJdfQ==

@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2 class="page-title">FLIGHT AND PASSENGER INFORMATION</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="1" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="org">
+        <label id="reservation">Reservation Number: </label><label>HQWR80</label>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div id="border" class="mdl-grid mdl-grid--no-spacing">
+  <div id="selectable" class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--1-col-phone">
+    <md-icon class="example-icon1">done</md-icon>
+  </div>
+  <div class="mdl-cell mdl-cell--11-col mdl-cell--7-col-tablet mdl-cell--3-col-phone">
+    <div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><label class="org">CM123</label></div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--1-col-phone"><label class="table-col1">ON TIME</label></div>
+        <div class="mdl-cell"><label class="date">Fri 11 Nov 16</label></div>
+      </div>
+      <div class="mdl-grid ">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">Origin</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--1-col-phone">Destination</div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><label class="org">PTY</label></div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--1-col-phone"><label class="org">MEX</label></div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">Panama City, PA</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--1-col-phone">Mexico City, MX</div>
+      </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">Departure</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--1-col-phone">Arrival</div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><label class="org">09:20 AM</label></div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--1-col-phone"><label class="org">11:06 AM</label></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div>
+  <md-icon class="example-icon">done</md-icon><label class="org">Check In All Passengers</label></div>
+<hr>
+<div class="mdl-grid">
+  <div class="org">CHAN/BEATRICE</div>
+</div>
+<div class="mdl-grid">
+  <div>
+    <md-icon class="example-icon">done</md-icon><label class="org">Not Checked In</label></div>
+</div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+    <md-select id="Connect Miles" placeholder="Connect Miles">
+      <md-option>Connect Miles</md-option>
+    </md-select>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+    <md-input-container>
+      <input md-input placeholder="CMG6098765988" />
+    </md-input-container>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+<div class="mdl-grid">
+  <div class="org">BRANGER/BADJIMENESZEDG</div>
+</div>
+<div class="mdl-grid">
+  <div>
+    <md-icon class="example-icon">done</md-icon><label class="org">Not Checked In</label></div>
+</div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+    <md-select id="Connect Miles" placeholder="Connect Miles">
+      <md-option>Connect Miles</md-option>
+    </md-select>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+    <md-input-container>
+      <input md-input placeholder="CMG6098765988" />
+    </md-input-container>
+  </div>
+</div>
+<hr>
+
+<div class="container centered">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <button md-raised-button color="primary" [routerLink]="'/terms'">Continue</button>
+    </div>
+  </div>
+</div>

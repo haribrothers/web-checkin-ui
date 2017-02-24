@@ -13,22 +13,22 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="First name">
+          <input md-input placeholder="Name (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Last name">
+          <input md-input placeholder="Last name (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Old name">
+          <input md-input placeholder="Date Of Birth (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Old name">
+          <input md-input placeholder="Nationality (*)">
         </md-input-container>
       </div>
     </div>
@@ -38,32 +38,32 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="First name">
+          <input md-input placeholder="Email (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Last name">
+          <input md-input placeholder="Confirm Email Address (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Old name">
+          <input md-input placeholder="Password (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Old name">
+          <input md-input placeholder="Confirm Password (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Old name">
+          <input md-input placeholder="PIN (*)">
         </md-input-container>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
         <md-input-container>
-          <input md-input placeholder="Old name">
+          <input md-input placeholder="Confirm PIN (*)">
         </md-input-container>
       </div>
 
@@ -90,4 +90,30 @@
       </div>
     </div>
   </accordion-group>
+
+  <accordion-group title="Subscription Preferences" [isOpen]="true" (onOpen)="onFirstOpen($event)" (onClose)="onFirstClose($event)">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">       
+       <md-checkbox ng-model="isChecked" aria-label="confirm"><label class="confirm"> I agree to receive Copa Airlines news and offers.</label></md-checkbox></div>
+       </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">       
+       <md-checkbox ng-model="isChecked" aria-label="confirm"><label class="confirm"> I agree to receive ConnectMiles news and offers.</label></md-checkbox></div>
+       </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">       
+       <md-checkbox ng-model="isChecked" aria-label="confirm"><label class="confirm"> I agree to receive ConnectMiles partners news and offers.</label></md-checkbox></div>
+       </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">       
+       <md-checkbox ng-model="isChecked" aria-label="confirm"><label class="confirm"> I accept the ConnectMiles terms & conditions which include that my information can be stored by the program.</label></md-checkbox></div>
+       </div>
+  </accordion-group>
+       <div class="container centered">
+        <div class="mdl-grid">
+         <div class="mdl-cell mdl-cell--12-col">
+          <button md-raised-button>Cancel</button><button md-raised-button color="primary" [routerLink]="'/flightPaxInfo'">Enroll</button>
+         </div>
+        </div>
+       </div>
 </accordion>

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2 class="page-title">FLIGHT AND PASSENGER INFORMATION</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="1" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+        <label>Please read the following information carefully</label><br>
+        <div><img src="./assets/images/icon-terms.png"title="Terms and Conditions"alt="Terms and Conditions"><u><a href="https://www.copaair.com/en/web/us/terms-conditions" class id="image_text">Terms and Conditions</a> </u>     
+        </div>
+        <div><img src="./assets/images/icon-dangerous-goods.png"title="Dangerous Goods"alt="Dangerous Goods"/><u><a href="https://www.copaair.com/en/web/us/restricted-baggage" class id="image_text">Dangerous Goods</a></u>
+        </div>
+        <div><img src="./assets/images/icon-travel-doc.png"title="Travel Documents"alt="Travel Documents"/><u><a href="https://www.copaair.com/en/web/us/immigration-requirements" class id="image_text">Travel Documents</a></u>
+        </div><br>
+        <div>The passenger is responsible for all necessary travel documents including passport, visas, tourist cards and other additional or special document required by law or regulations in force in the countries of departure, destination or transit. It is recommended to all passengers to be aware of their vaccination and health history, specifically, the International Certificate of Vaccination against Yellow Fever, if they are travelling to an endemic country.</div>    
+    </div>
+  </div>
+</div>
+
+<div class="container centered">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <button md-raised-button>I Disagree</button><button md-raised-button color="primary" [routerLink]="'/checkTravel'">I Agree</button>
+    </div>
+  </div>
+</div>

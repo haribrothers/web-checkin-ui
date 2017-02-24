@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <h2 class="page-title">FLIGHT AND PASSENGER INFORMATION</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="1" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+        <div><h3>Check Travel Documents</h3></div>
+        <div><a href="https://www.copaair.com/en/web/us/terms-conditions" class id="image_text">Information on Immigration Requirements</a></div>
+        <br>
+        <div>Provide complete and accurate travel document information for each passenger. Select passenger to complete the travel document information.</div>
+        <br>
+        <hr>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--1-col-phone"></div>
+    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--1-col-phone"></div>
+  </div>
+
+
+        <hr>
+    </div>
+  </div>
+</div>

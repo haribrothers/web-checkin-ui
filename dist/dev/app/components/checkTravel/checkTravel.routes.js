@@ -1,0 +1,10 @@
+"use strict";
+var checkTravel_component_1 = require("./checkTravel.component");
+exports.CheckTravelRoutes = [
+    {
+        path: 'checkTravel',
+        component: checkTravel_component_1.CheckTravelComponent
+    }
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9jb21wb25lbnRzL2NoZWNrVHJhdmVsL2NoZWNrVHJhdmVsLnJvdXRlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsaUVBQStEO0FBRWxELFFBQUEsaUJBQWlCLEdBQWU7SUFDM0M7UUFDRSxJQUFJLEVBQUUsYUFBYTtRQUNuQixTQUFTLEVBQUUsNENBQW9CO0tBQ2hDO0NBQ0YsQ0FBQyIsImZpbGUiOiJhcHAvY29tcG9uZW50cy9jaGVja1RyYXZlbC9jaGVja1RyYXZlbC5yb3V0ZXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDaGVja1RyYXZlbENvbXBvbmVudCB9IGZyb20gJy4vY2hlY2tUcmF2ZWwuY29tcG9uZW50JztcclxuXHJcbmV4cG9ydCBjb25zdCBDaGVja1RyYXZlbFJvdXRlczogQXJyYXk8YW55PiA9IFtcclxuICB7XHJcbiAgICBwYXRoOiAnY2hlY2tUcmF2ZWwnLFxyXG4gICAgY29tcG9uZW50OiBDaGVja1RyYXZlbENvbXBvbmVudFxyXG4gIH1cclxuXTsiXX0=
