@@ -21,4 +21,13 @@
   padding: 0 6px;
   min-width: 40px; }
 
-/*# sourceMappingURL=app\shared\copa-wci\components\toolbar.component.css.map */
+.screen-overlay {
+  pointer-events: all;
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  overflow-x: hidden; }
+
+/*# sourceMappingURL=app/shared/copa-wci/components/toolbar.component.css.map */

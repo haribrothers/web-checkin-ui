@@ -22,3 +22,13 @@
     padding: 0 6px;
     min-width: 40px;
 }
+
+.screen-overlay {
+    pointer-events: all;
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    overflow-x: hidden;
+}

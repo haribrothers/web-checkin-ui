@@ -1,5 +1,7 @@
 md-toolbar .mat-select.toolbar-select .mat-select-trigger {
-  border-bottom: none; }
+  border-bottom: none;
+  margin: 0;
+  padding: 0; }
   md-toolbar .mat-select.toolbar-select .mat-select-trigger .mat-select-value {
     padding-left: 5px;
     top: 0;
@@ -37,4 +39,4 @@ md-toolbar .mat-select {
     min-width: 50px;
     height: 25px; } }
 
-/*# sourceMappingURL=app\shared\i18n\components\lang-switcher.component.css.map */
+/*# sourceMappingURL=app/shared/i18n/components/lang-switcher.component.css.map */

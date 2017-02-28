@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout"; 
+
 
 // module
 import { CORE_DIRECTIVES } from './directives/index';
@@ -25,7 +27,9 @@ interface ICoreModuleOptions {
     CommonModule,
     RouterModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+        FlexLayoutModule.forRoot()
+
   ],
   declarations: [
     CORE_DIRECTIVES

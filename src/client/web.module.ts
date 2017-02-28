@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { Http } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout"; 
+import {FormsModule, ReactiveFormsModule} from "@angular/forms"
 
 // libs
 import { StoreModule } from '@ngrx/store';
@@ -67,6 +69,8 @@ export function cons() {
     ]),
     routerModule,
     AnalyticsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MultilingualModule.forRoot([{
       provide: TranslateLoader,
       deps: [Http],
@@ -77,7 +81,8 @@ export function cons() {
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
     EffectsModule.run(MultilingualEffects),
     EffectsModule.run(NameListEffects),
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    FlexLayoutModule.forRoot()
   ],
   declarations: [
     APP_COMPONENTS
@@ -85,7 +90,8 @@ export function cons() {
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: '<%= APP_BASE %>'
+      useValue: '<%= APP_BASE %>',
+      
     }
   ],
   bootstrap: [AppComponent]

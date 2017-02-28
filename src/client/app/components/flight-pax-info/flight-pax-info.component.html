@@ -1,0 +1,276 @@
+<div class="container">
+  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <h2 class="page-title">{{ 'FLIGHT_PAX_INFO' | translate }}</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="1" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <h2 class="content-title">{{ 'RESER_NUMBER' | translate }}<strong>7587585</strong></h2>
+    </div>
+  </div>
+</div>
+<div class="hr-dashed"></div>
+<div class="container">
+  <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <selection-card [checked]="true" [shadow]="true">
+        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Flight</label>
+                  <label data-content [isBold]="true">CM144</label>
+                  <label data-sub-content>Sun 15 Jan 17</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid">
+                <div class="data-field">
+                  <label fxHide.xs data-label>Status</label>
+                  <label data-content [isBold]="true" contentColor="#449C54">ON TIME</label>
+                  <label data-sub-content>Sun 15 Jan 17</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex fxFlex.xs="40%" class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Origin</label>
+                  <label data-content [isBold]="true">YUL</label>
+                  <label data-sub-content>Montreal, CA</label>
+                </data-field>
+              </div>
+              <div fxFlex="10%"  class="flex-grid flex-center">
+                <md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
+              </div>
+              <div fxFlex class="flex-grid">
+                <div class="data-field">
+                  <label fxHide.xs class="data-label">Destination</label>
+                  <label data-content [isBold]="true">PTY</label>
+                  <label data-sub-content>Mexico City, MX</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Departure</label>
+                  <label data-content>8:30 AM</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid">
+                <div class="data-field">
+                  <label fxHide.xs class="data-label">Arrival</label>
+                  <label class="data-content">2:46 PM</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </selection-card>
+    </div>
+  </div>
+</div>
+<div class="hr-dashed"></div>
+
+<div class="container">
+  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <a class="content-link" routerLink="."><md-icon class="check-icon">done</md-icon><span>Checkin all Passenger</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <selection-card [checked]="true" [shadow]="false">
+        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Name</label>
+                  <label data-content [isBold]="true">RODRIGUEZDELGADO/ALFONSV</label>
+                </data-field>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field >
+                  <label fxHide.xs data-label>Status</label>
+                  <label class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false" ><md-icon class="check-icon">check_circle</md-icon> Not Checked In</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label data-label>Seat</label>
+                  <label data-content [isBold]="true">14A <a class="content-link" routerLink=".">Change</a></label>
+                </data-field>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-horizontal-gutter no-border" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <md-select fxFlex placeholder="Frequent Flyer" class="display-as-block">
+                  <md-option value="sample">sample</md-option>
+                </md-select>
+              </div>
+              <div fxFlex class="flex-grid">
+                <md-input-container class="display-as-block">
+                  <input mdInput required >
+                </md-input-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </selection-card>
+    </div>
+    <div fxFlex class="flex-grid">
+      <selection-card [checked]="true" [shadow]="false">
+        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Name</label>
+                  <label data-content [isBold]="true">RODRIGUEZDELGADO/ALFONSV</label>
+                </data-field>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field >
+                  <label fxHide.xs data-label>Status</label>
+                  <label class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false" ><md-icon class="check-icon">check_circle</md-icon> Not Checked In</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label data-label>Seat</label>
+                  <label data-content [isBold]="true">14A <a class="content-link" routerLink=".">Change</a></label>
+                </data-field>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-horizontal-gutter no-border" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <md-select fxFlex placeholder="Frequent Flyer" class="display-as-block">
+                  <md-option value="sample">sample</md-option>
+                </md-select>
+              </div>
+              <div fxFlex class="flex-grid">
+                <md-input-container class="display-as-block">
+                  <input mdInput required >
+                </md-input-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </selection-card>
+    </div>
+  </div>
+</div>
+<div class="hr-dashed"></div>
+<div class="container">
+  <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <selection-card [checked]="false" [shadow]="true">
+        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Flight</label>
+                  <label data-content [isBold]="true">CM144</label>
+                  <label data-sub-content>Sun 15 Jan 17</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid">
+                <div class="data-field">
+                  <label fxHide.xs data-label>Status</label>
+                  <label data-content [isBold]="true" contentColor="#449C54">ON TIME</label>
+                  <label data-sub-content>Sun 15 Jan 17</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex fxFlex.xs="40%" class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Origin</label>
+                  <label data-content [isBold]="true">YUL</label>
+                  <label data-sub-content>Montreal, CA</label>
+                </data-field>
+              </div>
+              <div fxFlex="10%"  class="flex-grid flex-center">
+                <md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
+              </div>
+              <div fxFlex class="flex-grid">
+                <div class="data-field">
+                  <label fxHide.xs class="data-label">Destination</label>
+                  <label data-content [isBold]="true">PTY</label>
+                  <label data-sub-content>Mexico City, MX</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex class="flex-grid">
+            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid">
+                <data-field>
+                  <label fxHide.xs data-label>Departure</label>
+                  <label data-content>8:30 AM</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid">
+                <div class="data-field">
+                  <label fxHide.xs class="data-label">Arrival</label>
+                  <label class="data-content">2:46 PM</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </selection-card>
+    </div>
+  </div>
+</div>
+<div class="hr-dashed"></div>
+
+<div class="container centered">
+  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <button md-raised-button color="primary" [routerLink]="'joinmiles'">{{ 'CONTINUE' | translate }}</button>
+    </div>
+  </div>
+</div>
+
+<!--<button md-raised-button color="primary" (click)="chnagedetect()">{{ 'FIND_RESER' | translate }}</button>-->
+<!--<form (submit)="addName()">
+  <input [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
+  <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
+</form>
+<ul>
+  <li *ngFor="let name of (names$ | async)">{{name}}</li>
+</ul>
+<a *ngFor="let name of sample" class="link">{{name}}</a>
+<p>
+  <a class="link" (click)="readAbout()">About - RouterExtensions example</a>
+</p>-->

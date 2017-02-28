@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout"; 
+
 
 // app
 import { COPA_WCI_COMPONENTS } from './components/index';
@@ -22,7 +24,8 @@ import { MultilingualModule } from '../i18n/multilingual.module';
     HttpModule,
     RouterModule,
     MultilingualModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    FlexLayoutModule.forRoot()
   ],
   declarations: [
     COPA_WCI_COMPONENTS

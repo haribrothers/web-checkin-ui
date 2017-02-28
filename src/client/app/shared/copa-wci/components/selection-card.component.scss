@@ -1,0 +1,39 @@
+$selection-check-width: 50px;
+
+.mat-card.selection-card {
+    padding: 0;
+    display: flex;
+    cursor: pointer;
+    &.no-shadow{
+        box-shadow: none;
+        border: 1px solid #DBDAD8;
+    }
+    &>.selection-check {
+        // min-height: 100px;
+        width: $selection-check-width;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background-color: #999;
+        color: rgba(255, 255, 255, 0.4);
+        transition: all 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+        .selection-check-icon{
+            font-weight: 700;
+        }
+    }
+    &>.selection-content {
+        flex: 1 auto;
+        background: #FFF;
+        padding: 8px;
+        transition: all 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    &.selection-active {
+        &>.selection-check {
+            background-color: #2260A4;
+            color: #FFF;
+        }
+        &>.selection-content {
+            background: #F4F7FA;
+        }
+    }
+}

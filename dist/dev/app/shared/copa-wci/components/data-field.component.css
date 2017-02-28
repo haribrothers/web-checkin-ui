@@ -1,0 +1,30 @@
+.data-label {
+  display: block;
+  color: #666;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px; }
+
+.data-content {
+  display: block;
+  color: #1F4A7D;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis; }
+  .data-content.content-bold {
+    font-weight: 700; }
+  .data-content.content-upper {
+    text-transform: uppercase; }
+
+.data-sub-content {
+  display: block;
+  color: #333;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px; }
+
+/*# sourceMappingURL=app/shared/copa-wci/components/data-field.component.css.map */

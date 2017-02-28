@@ -1,47 +1,61 @@
 <div class="container">
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
+  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
       <h2 class="page-title">{{ 'FIND_RESER' | translate }}</h2>
       <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
         activeIndex="0" (onNodeClick)="showAlert($event)"></bubble-progress>
     </div>
   </div>
 </div>
-<div class="container xsmall">
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      <md-input-container>
-        <input md-input placeholder="{{ 'TICKET_NUMBER' | translate }}">
-      </md-input-container>
-    </div>
-    <div class="mdl-cell mdl-cell--12-col">
-      <md-input-container>
-        <input md-input placeholder="{{ 'ORIGIN' | translate }}">
-      </md-input-container>
-    </div>
-    <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
-      <md-input-container>
-        <input md-input placeholder="{{ 'LAST_NAME' | translate }}">
-      </md-input-container>
-    </div>
-  </div>
-</div>
-<div class="hr-dashed"></div>
-<div class="container xsmall centered">
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      <p class="label-info">{{ 'CHECKTOP' | translate }}</p>
-    </div>
-  </div>
-</div>
-<div class="container centered">
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      <button md-raised-button color="primary" [routerLink]="'joinmiles'">{{ 'FIND_RESER' | translate }}</button>
-    </div>
-  </div>
+<form [formGroup]="findResForm" >
+  <div class="container xsmall">
+    <div class="flex-container with-gutter" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutAlign.xs="start">
+      <div fxFlex class="flex-grid">
+        <md-input-container class="display-as-block">
+          <input formControlName="ticket" mdInput placeholder="{{ 'TICKET_NUMBER' | translate }}">
+          <div mdSuffix>
+            <md-icon *ngIf="findResForm.controls.ticket.touched && findResForm.controls.ticket.errors" class="error-icon">clear</md-icon>
+            <md-icon *ngIf="findResForm.controls.ticket.touched && !findResForm.controls.ticket.errors" class="no-error-icon">done</md-icon>
+          </div>
+          <md-hint *ngIf="findResForm.controls.ticket.touched && findResForm.controls.ticket.errors" align="start">
+            <div *ngIf="findResForm.controls.ticket.errors.required">This field is required</div>
+            <div *ngIf="findResForm.controls.ticket.errors.minlength">Please enter atleast 6 characters</div>
+          </md-hint>
 
-</div>
+        </md-input-container>
+      </div>
+      <div fxFlex class="flex-grid">
+        <md-input-container class="display-as-block">
+          <input formControlName="orgin" mdInput required placeholder="{{ 'ORIGIN' | translate }}">
+
+        </md-input-container>
+      </div>
+      <div fxFlex class="flex-grid">
+        <md-input-container class="display-as-block">
+          <input formControlName="lastname" mdInput required placeholder="{{ 'LAST_NAME' | translate }}">
+        </md-input-container>
+      </div>
+    </div>
+
+  </div>
+  <div class="hr-dashed"></div>
+  <div class="container xsmall centered">
+    <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+      <div fxFlex class="flex-grid">
+        <p class="label-info">{{ 'CHECKTOP' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container xsmall centered">
+    <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+      <div fxFlex class="flex-grid">
+        <button md-raised-button color="primary" [disabled]="!findResForm.valid" (click)="chnagedetect()" >{{ 'FIND_RESER' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!--<button md-raised-button color="primary" (click)="chnagedetect()">{{ 'FIND_RESER' | translate }}</button>-->
 <!--<form (submit)="addName()">
   <input [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
   <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>

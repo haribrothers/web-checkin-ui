@@ -1,5 +1,6 @@
 @import '../scss/variables';
 @import "overridemedia";
+@import "flexlayout";
 @import 'fonts.css';
 
 /* Reset */
@@ -47,28 +48,9 @@ li {
   margin-top: 4px;
 }
 
-// input {
-//   border: 1px solid $primary;
-//   font-size: 14px; 
-//   height: 40px;
-//   outline: none;
-//   padding: 8px;
+// button:hover {
+//   background-color: $secondary;
 // }
-// button {
-//   background-color: $primary;
-//   border-style: none;
-//   color: rgba(255, 255, 255, 0.87);
-//   cursor: pointer;
-//   display: inline-block;
-//   font-size: 14px;
-//   height: 40px;
-//   padding: 8px 18px;
-//   text-decoration: none;
-// }
-button:hover {
-  background-color: $secondary;
-}
-
 
 /* platform specific */
 
@@ -90,8 +72,6 @@ button:hover {
 //     margin-right: -16px;
 //   }
 // }
-
-
 .container {
   // background-color: #EEEEEE;
   // margin-top: 32px;
@@ -115,16 +95,70 @@ button:hover {
 }
 
 .page-title {
-    font-size: 18px;
-    font-weight: 300;
-    color: #225FA2;
-    margin-top: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #225FA2;
+  margin-top: 0;
+}
+
+.content-title {
+  font-size: 16px;
+  font-weight: 300;
+  color: #225FA2;
+  margin-top: 0;
+}
+
+a.content-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #2260A4;
+  text-transform: capitalize;
+  font-weight: 300;
+  &>span {
+    font-size: 16px;
+    float: left;
+  }
+  &>.mat-icon {
+    float: left;
+    margin-right: 5px;
+    &+span {
+      line-height: 24px;
+    }
+  }
 }
 
 .hr-dashed {
-    border-top: 3px dotted #AAA;
+  border-top: 3px dotted #AAA;
 }
 
+md-radio-group>label {
+  display: block;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.seperator-space {
+  display: inline-block;
+  width: 50px;
+}
+
+.mat-input-suffix .mat-icon.error-icon {
+  color: #F44336;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: bottom;
+}
+
+.mat-input-suffix .mat-icon.no-error-icon {
+  color: #673AB7;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: bottom;
+}
 
 @import '@angular/material/core/theming/prebuilt/deeppurple-amber.scss';
-@import 'responsivegrid.css';
+// @import 'responsivegrid.css';

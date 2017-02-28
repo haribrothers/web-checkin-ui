@@ -8,3 +8,9 @@
     <button md-button>Login</button>
     <lang-switcher></lang-switcher>
 </md-toolbar>
+<md-progress-bar *ngIf="showProgress"
+    class="example-margin"
+    color="warn"
+    mode="indeterminate">
+</md-progress-bar>
+<div *ngIf="showOverlay" class="screen-overlay"></div>

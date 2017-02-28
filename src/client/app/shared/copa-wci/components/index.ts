@@ -3,6 +3,8 @@ import { ToolbarComponent } from './toolbar.component';
 import {BubbleProgressComponent} from "./bubble-progress.component";
 import {FooterComponent} from "./footer.component";
 import {Accordion, AccordionGroup} from "./accordion.component";
+import {SelectionCardComponent} from "./selection-card.component";
+import {DataFieldComponent, DataContent,DataLabel, DataSubContent} from "./data-field.component";
 
 export const COPA_WCI_COMPONENTS: any[] = [
   NavbarComponent,
@@ -10,7 +12,12 @@ export const COPA_WCI_COMPONENTS: any[] = [
   BubbleProgressComponent,
   FooterComponent,
   Accordion,
-  AccordionGroup
+  AccordionGroup,
+  SelectionCardComponent,
+  DataFieldComponent, 
+  DataContent,
+  DataLabel, 
+  DataSubContent
 ];
 
 export * from './navbar.component';
@@ -18,3 +25,5 @@ export * from './toolbar.component';
 export * from './bubble-progress.component';
 export * from './footer.component';
 export * from './accordion.component';
+export * from "./selection-card.component";
+export * from "./data-field.component";

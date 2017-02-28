@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/components/flight-pax-info/flight-pax-info.component.scss"],"names":[],"mappings":"AAAA;EACE,iCAAwB;UAAxB,yBAAwB;EACxB,eAAc,EACf","file":"flight-pax-info.component.css","sourcesContent":[".route-icon{\n  transform: rotate(90deg);\n  color: #1F4A7D;\n}"]}

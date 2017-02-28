@@ -1,0 +1,34 @@
+// Contains all the styles for flex-layout
+
+.flex-container {
+  &.with-gutter {
+    padding: 0 8px;
+    &>.flex-grid {
+      padding: 8px;
+    }
+  }
+  &.with-vertical-gutter {
+    &>.flex-grid {
+      padding: 8px 0;
+    }
+  }
+  &.with-horizontal-gutter {
+    &.no-border{
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+    &>.flex-grid {
+      padding: 0 8px;
+    }
+  }
+}
+
+.flex-grid>.display-as-block {
+  display: block;
+}
+
+.flex-center{
+  display: flex !important;
+  align-items: center;
+  // justify-content: center;
+}
