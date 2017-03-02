@@ -1,26 +1,51 @@
 // Contains all the styles for flex-layout
+$flex-container-padding-size: 16px;
+
 
 .flex-container {
-  &.with-gutter {
-    padding: 0 8px;
-    &>.flex-grid {
-      padding: 8px;
-    }
+  &.with-padding-top{
+    padding-top:$flex-container-padding-size;
   }
-  &.with-vertical-gutter {
-    &>.flex-grid {
-      padding: 8px 0;
-    }
+  &.with-padding-bottom{
+    padding-bottom: $flex-container-padding-size;
   }
-  &.with-horizontal-gutter {
-    &.no-border{
-      margin-left: -8px;
-      margin-right: -8px;
-    }
-    &>.flex-grid {
-      padding: 0 8px;
-    }
+  &.with-padding-left{
+    padding-left: $flex-container-padding-size;
   }
+  &.with-padding-horizontal{
+    padding-right: $flex-container-padding-size;
+  }
+  &.with-padding-vertical{
+    padding-top:$flex-container-padding-size;
+    padding-bottom: $flex-container-padding-size;
+  }
+  &.with-padding-horizontal{
+    padding-left: $flex-container-padding-size;
+    padding-right: $flex-container-padding-size;
+  }
+  &.with-padding-all{
+    padding: $flex-container-padding-size;
+  }
+  // &.with-gutter {
+  //   padding: 0 8px;
+  //   &>.flex-grid {
+  //     padding: 8px;
+  //   }
+  // }
+  // &.with-vertical-gutter {
+  //   &>.flex-grid {
+  //     padding: 8px 0;
+  //   }
+  // }
+  // &.with-horizontal-gutter {
+  //   &.no-border{
+  //     margin-left: -8px;
+  //     margin-right: -8px;
+  //   }
+  //   &>.flex-grid {
+  //     padding: 0 8px;
+  //   }
+  // }
 }
 
 .flex-grid>.display-as-block {

@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     this.names$ = store.let(getNames);
     this.findResForm = fb.group({
       ticket: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-      orgin: ['', Validators.required],
+      orgin: [''],
       lastname: ['', Validators.required]
     });
     toolbarService.showProgress$.subscribe(

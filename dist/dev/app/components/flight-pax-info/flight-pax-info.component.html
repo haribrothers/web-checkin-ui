@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-all" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <h2 class="page-title">{{ 'FLIGHT_PAX_INFO' | translate }}</h2>
       <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
@@ -8,7 +8,7 @@
   </div>
 </div>
 <div class="container">
-  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-bottom with-padding-horizontal" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <h2 class="content-title">{{ 'RESER_NUMBER' | translate }}<strong>7587585</strong></h2>
     </div>
@@ -16,12 +16,12 @@
 </div>
 <div class="hr-dashed"></div>
 <div class="container">
-  <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <selection-card [checked]="true" [shadow]="true">
         <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Flight</label>
@@ -39,7 +39,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container " fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex fxFlex.xs="40%" class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Origin</label>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Departure</label>
@@ -83,7 +83,7 @@
 <div class="hr-dashed"></div>
 
 <div class="container">
-  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-top" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <a class="content-link" routerLink="."><md-icon class="check-icon">done</md-icon><span>Checkin all Passenger</span></a>
     </div>
@@ -91,12 +91,12 @@
 </div>
 
 <div class="container">
-  <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <selection-card [checked]="true" [shadow]="false">
         <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Name</label>
@@ -106,7 +106,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field >
                   <label fxHide.xs data-label>Status</label>
@@ -122,7 +122,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-horizontal-gutter no-border" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <md-select fxFlex placeholder="Frequent Flyer" class="display-as-block">
                   <md-option value="sample">sample</md-option>
@@ -142,7 +142,7 @@
       <selection-card [checked]="true" [shadow]="false">
         <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Name</label>
@@ -152,7 +152,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field >
                   <label fxHide.xs data-label>Status</label>
@@ -168,7 +168,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-horizontal-gutter no-border" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <md-select fxFlex placeholder="Frequent Flyer" class="display-as-block">
                   <md-option value="sample">sample</md-option>
@@ -188,12 +188,12 @@
 </div>
 <div class="hr-dashed"></div>
 <div class="container">
-  <div class="flex-container with-vertical-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <selection-card [checked]="false" [shadow]="true">
         <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Flight</label>
@@ -211,7 +211,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex fxFlex.xs="40%" class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Origin</label>
@@ -232,7 +232,7 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container with-vertical-gutter" fxLayout="row" fxLayoutAlign="center">
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
                 <data-field>
                   <label fxHide.xs data-label>Departure</label>
@@ -255,22 +255,9 @@
 <div class="hr-dashed"></div>
 
 <div class="container centered">
-  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <button md-raised-button color="primary" [routerLink]="'joinmiles'">{{ 'CONTINUE' | translate }}</button>
     </div>
   </div>
 </div>
-
-<!--<button md-raised-button color="primary" (click)="chnagedetect()">{{ 'FIND_RESER' | translate }}</button>-->
-<!--<form (submit)="addName()">
-  <input [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
-  <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
-</form>
-<ul>
-  <li *ngFor="let name of (names$ | async)">{{name}}</li>
-</ul>
-<a *ngFor="let name of sample" class="link">{{name}}</a>
-<p>
-  <a class="link" (click)="readAbout()">About - RouterExtensions example</a>
-</p>-->

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+  <div class="flex-container with-padding-all" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <h2 class="page-title">{{ 'FIND_RESER' | translate }}</h2>
       <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
@@ -7,26 +7,48 @@
     </div>
   </div>
 </div>
+
+<!--<div class="container ">
+  <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="start">
+    <div fxFlex class="flex-grid">
+      <md-input-container class="display-as-block">
+        <input mdInput required placeholder="{{ 'TICKET_NUMBER' | translate }}">
+      </md-input-container>
+    </div>
+    <div fxFlex class="flex-grid">
+      <md-input-container class="display-as-block">
+        <input #postalCode mdInput required placeholder="{{ 'TICKET_NUMBER' | translate }}">
+        <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+      </md-input-container>
+    </div>
+    <div fxFlex class="flex-grid">
+      <md-select fxFlex placeholder="Favorite food" class="display-as-block">
+        <md-option value="sample">sample</md-option>
+      </md-select>
+    </div>
+
+  </div>
+</div>-->
+
 <form [formGroup]="findResForm" >
   <div class="container xsmall">
-    <div class="flex-container with-gutter" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutAlign.xs="start">
+    <div class="flex-container with-padding-bottom" fxLayoutGap="16px"  fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutAlign.xs="start">
       <div fxFlex class="flex-grid">
         <md-input-container class="display-as-block">
-          <input formControlName="ticket" mdInput placeholder="{{ 'TICKET_NUMBER' | translate }}">
+          <input required formControlName="ticket" mdInput placeholder="{{ 'TICKET_NUMBER' | translate }}">
           <div mdSuffix>
             <md-icon *ngIf="findResForm.controls.ticket.touched && findResForm.controls.ticket.errors" class="error-icon">clear</md-icon>
             <md-icon *ngIf="findResForm.controls.ticket.touched && !findResForm.controls.ticket.errors" class="no-error-icon">done</md-icon>
           </div>
           <md-hint *ngIf="findResForm.controls.ticket.touched && findResForm.controls.ticket.errors" align="start">
-            <div *ngIf="findResForm.controls.ticket.errors.required">This field is required</div>
+            <!--<div *ngIf="findResForm.controls.ticket.errors.required">This field is required</div>-->
             <div *ngIf="findResForm.controls.ticket.errors.minlength">Please enter atleast 6 characters</div>
           </md-hint>
-
         </md-input-container>
       </div>
       <div fxFlex class="flex-grid">
         <md-input-container class="display-as-block">
-          <input formControlName="orgin" mdInput required placeholder="{{ 'ORIGIN' | translate }}">
+          <input formControlName="orgin" mdInput placeholder="{{ 'ORIGIN' | translate }}">
 
         </md-input-container>
       </div>
@@ -40,14 +62,14 @@
   </div>
   <div class="hr-dashed"></div>
   <div class="container xsmall centered">
-    <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div class="flex-container with-padding-top" fxLayout="column" fxLayoutAlign="center">
       <div fxFlex class="flex-grid">
         <p class="label-info">{{ 'CHECKTOP' | translate }}</p>
       </div>
     </div>
   </div>
   <div class="container xsmall centered">
-    <div class="flex-container with-gutter" fxLayout="column" fxLayoutAlign="center">
+    <div class="flex-container with-padding-top" fxLayout="column" fxLayoutAlign="center">
       <div fxFlex class="flex-grid">
         <button md-raised-button color="primary" [disabled]="!findResForm.valid" (click)="chnagedetect()" >{{ 'FIND_RESER' | translate }}</button>
       </div>
