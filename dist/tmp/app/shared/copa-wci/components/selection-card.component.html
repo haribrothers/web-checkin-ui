@@ -1,4 +1,4 @@
-<md-card class="selection-card" [class.selection-active]="checked" [class.no-shadow]="!shadow">
+<md-card class="selection-card" [class.selection-active]="checked" [class.selection-disabled]="disabled" [class.no-shadow]="!shadow">
   <div class="selection-check" (click)="toggleSelection($event)">
     <md-icon class="selection-check-icon">done</md-icon>
   </div>

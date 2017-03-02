@@ -22,14 +22,17 @@ export class SelectionCardComponent {
 
   @Input() checked:boolean = false;
   @Input() shadow:boolean = true;
+  @Input() disabled:boolean = false;
 
   @Output() onToggleCheck = new EventEmitter();
 
   constructor() { }
 
   toggleSelection(event: any){
-    this.checked = !this.checked;
-    this.onToggleCheck.emit({value:this.checked});
+    if(!this.disabled){
+      this.checked = !this.checked;
+      this.onToggleCheck.emit({value:this.checked});
+    }
   }
 
 }

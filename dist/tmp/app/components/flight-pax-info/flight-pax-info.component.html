@@ -19,7 +19,7 @@
   <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <selection-card [checked]="true" [shadow]="true">
-        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+        <div class="flex-container"  fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
             <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
@@ -39,17 +39,18 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container " fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
-              <div fxFlex fxFlex.xs="40%" class="flex-grid">
-                <data-field>
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="stretch">
+              <div fxFlex class="flex-grid">
+                <data-field style="float:left">
                   <label fxHide.xs data-label>Origin</label>
                   <label data-content [isBold]="true">YUL</label>
                   <label data-sub-content>Montreal, CA</label>
                 </data-field>
-              </div>
-              <div fxFlex="10%"  class="flex-grid flex-center">
+                <div class="flex-center" style="float:right">
                 <md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
               </div>
+              </div>
+              
               <div fxFlex class="flex-grid">
                 <div class="data-field">
                   <label fxHide.xs class="data-label">Destination</label>
@@ -94,7 +95,7 @@
   <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
       <selection-card [checked]="true" [shadow]="false">
-        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+        <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
             <div class="flex-container" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
@@ -140,7 +141,7 @@
     </div>
     <div fxFlex class="flex-grid">
       <selection-card [checked]="true" [shadow]="false">
-        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+        <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
             <div class="flex-container" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
@@ -190,8 +191,8 @@
 <div class="container">
   <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
     <div fxFlex class="flex-grid">
-      <selection-card [checked]="false" [shadow]="true">
-        <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+      <selection-card [checked]="false" [disabled]="true" [shadow]="true">
+        <div class="flex-container"  fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
           <div fxFlex class="flex-grid">
             <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
               <div fxFlex class="flex-grid">
@@ -211,17 +212,18 @@
             </div>
           </div>
           <div fxFlex class="flex-grid">
-            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
-              <div fxFlex fxFlex.xs="40%" class="flex-grid">
-                <data-field>
+            <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="stretch">
+              <div fxFlex class="flex-grid">
+                <data-field style="float:left">
                   <label fxHide.xs data-label>Origin</label>
                   <label data-content [isBold]="true">YUL</label>
                   <label data-sub-content>Montreal, CA</label>
                 </data-field>
-              </div>
-              <div fxFlex="10%"  class="flex-grid flex-center">
+                <div class="flex-center" style="float:right">
                 <md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
               </div>
+              </div>
+              
               <div fxFlex class="flex-grid">
                 <div class="data-field">
                   <label fxHide.xs class="data-label">Destination</label>

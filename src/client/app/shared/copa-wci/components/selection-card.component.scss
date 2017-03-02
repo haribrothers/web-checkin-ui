@@ -27,6 +27,15 @@ $selection-check-width: 50px;
         padding: 8px;
         transition: all 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
     }
+    &.selection-disabled {
+        &>.selection-check {
+            background-color: #DDD;
+            color: #DDD;
+        }
+        &>.selection-content {
+            //background: #F4F7FA;
+        }
+    }
     &.selection-active {
         &>.selection-check {
             background-color: #2260A4;
