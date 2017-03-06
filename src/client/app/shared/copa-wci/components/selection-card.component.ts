@@ -1,10 +1,12 @@
 import {
+    ApplicationInitStatus,
     ChangeDetectionStrategy,
     Component,
     Directive,
     EventEmitter,
     Input,
     OnDestroy,
+    OnInit,
     Output,
     ViewEncapsulation
 } from '@angular/core';
@@ -18,20 +20,29 @@ import {
   styleUrls: ['./selection-card.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class SelectionCardComponent {
+export class SelectionCardComponent implements OnInit{
 
-  @Input() checked:boolean = false;
-  @Input() shadow:boolean = true;
-  @Input() disabled:boolean = false;
+  @Input() checked: boolean = false;
+  @Input() shadow: boolean = true;
+  @Input() disabled: boolean = false;
 
   @Output() onToggleCheck = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+    
+  }
 
-  toggleSelection(event: any){
-    if(!this.disabled){
+  ngOnInit(){
+    if (this.checked) {
+      this.onToggleCheck.emit({ value: this.checked });
+    }
+  }
+
+
+  toggleSelection(event: any) {
+    if (!this.disabled) {
       this.checked = !this.checked;
-      this.onToggleCheck.emit({value:this.checked});
+      this.onToggleCheck.emit({ value: this.checked });
     }
   }
 

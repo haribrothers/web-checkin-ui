@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="flex-container with-padding-all" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <h2 class="page-title">{{ 'FLIGHT_PAX_INFO' | translate }}</h2>
+      <bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+        activeIndex="1" (onNodeClick)="showAlert($event)"></bubble-progress>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="flex-container with-padding-horizontal" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <h2 class="content-title margin-none">{{ 'CHECK_TRAVEL' | translate }}</h2>
+      <a class="content-link margin-none" routerLink=".">Informtion on Immigration requirements</a>
+      <div class="info-content">
+        <p class="info">Provide complete and accurate travel document information for each passenger. Select passenger to complete the travel
+          document informa on.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hr-dashed"></div>
+<div class="container">
+  <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <selection-card [checked]="true" [shadow]="false" (onToggleCheck)="onSelected($event,'Hello')">
+        <div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayout.xs="row" fxLayoutAlign="center">
+          <div fxFlex class="flex-grid">
+            <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+              <div fxFlex class="flex-grid" fxFlexAlign="center" fxFlexAlign.xs="start">
+                <data-field>
+                  <!--<label fxHide.xs data-label>Name</label>-->
+                  <label data-content [isBold]="true">RODRIGUEZDELGADO/ALFONSV</label>
+                </data-field>
+              </div>
+              <div fxFlex class="flex-grid" fxFlexAlign="center" fxFlexAlign.xs="start">
+                <data-field>
+                  <!--<label fxHide.xs data-label>Status</label>-->
+                  <label class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false"><md-icon class="check-icon">check_circle</md-icon> Not Checked In</label>
+                </data-field>
+              </div>
+            </div>
+          </div>
+          <div fxFlex="35px" fxFlexAlign="center" class="flex-grid">
+            <div class="dock-status">
+              <md-icon class="check-icon">more_horiz</md-icon>
+            </div>
+          </div>
+        </div>
+      </selection-card>
+      <accordion [isMultiExpand]="true" [style.display]="isOpen ? 'block': 'none'">
+        <accordion-group title="Basic Information" [isOpen]="true">
+          <div class="flex-container with-padding-all" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutAlign.xs="start">
+            <div fxFlex class="flex-grid">
+              <md-select fxFlex placeholder="Document Type" class="display-as-block">
+                <md-option value="sample">Passport</md-option>
+              </md-select>
+            </div>
+            <div fxFlex class="flex-grid">
+              <md-input-container class="display-as-block">
+                <input required mdInput placeholder="{{ 'TICKET_NUMBER' | translate }}">
+              </md-input-container>
+            </div>
+            <div fxFlex class="flex-grid">
+              <md-input-container fxFlexFill >
+                <input mdInput placeholder="{{ 'ORIGIN' | translate }}">
+              </md-input-container>
+            </div>
+            <div fxFlex class="flex-grid">
+              <md-input-container class="display-as-block">
+                <input mdInput required placeholder="{{ 'LAST_NAME' | translate }}">
+              </md-input-container>
+            </div>
+            <div fxFlex class="flex-grid">
+              <md-radio-group>
+                <label class="radio-group-header">Do you have a preassigned ConnectMiles Card?</label>
+                <md-radio-button color="primary" value="1">No</md-radio-button>
+                <div class="seperator-space"></div>
+                <md-radio-button value="2">Yes</md-radio-button>
+              </md-radio-group>
+            </div>
+
+          </div>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</div>
+
+<div class="hr-dashed"></div>
+<div class="container">
+  <div class="flex-container with-padding-all" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <md-checkbox>I confirm the above regulatory details are correct and have read and agree to the Check In Guidelines and the Providing Passenger Informa on Guidelines.</md-checkbox>
+    </div>
+  </div>
+</div>
+
+<div class="container centered">
+  <div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex class="flex-grid">
+      <button md-raised-button color="primary" [routerLink]="'joinmiles'">{{ 'CONTINUE' | translate }}</button>
+    </div>
+  </div>
+</div>

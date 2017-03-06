@@ -48,6 +48,94 @@
       -ms-flex-align: center;
           align-items: center; }
 
+.margin-none {
+  margin: 0; }
+
+.margin-all {
+  margin: 16px; }
+
+.margin-vertical {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.margin-vertical-only {
+  margin: 16px 0; }
+
+.margin-horizontal {
+  margin-left: 16px;
+  margin-right: 16px; }
+
+.margin-horizontal-only {
+  margin: 0 16px; }
+
+.margin-top {
+  margin-top: 16px; }
+
+.margin-top-only {
+  margin: 16px 0 0 0; }
+
+.margin-bottom {
+  margin-bottom: 16px; }
+
+.margin-bottom-only {
+  margin: 0 0 16px 0; }
+
+.margin-left {
+  margin-left: 16px; }
+
+.margin-left-only {
+  margin: 0 0 0 16px; }
+
+.margin-right {
+  margin-right: 16px; }
+
+.margin-right-only {
+  margin: 0 16px 0 0; }
+
+.padding-none {
+  padding: 0; }
+
+.padding-all {
+  padding: 16px; }
+
+.padding-vertical {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.padding-vertical-only {
+  padding: 16px 0; }
+
+.padding-horizontal {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.padding-horizontal-only {
+  padding: 0 16px; }
+
+.padding-top {
+  padding-top: 16px; }
+
+.padding-top-only {
+  padding: 16px 0 0 0; }
+
+.padding-bottom {
+  padding-bottom: 16px; }
+
+.padding-bottom-only {
+  padding: 0 0 16px 0; }
+
+.padding-left {
+  padding-left: 16px; }
+
+.padding-left-only {
+  padding: 0 0 0 16px; }
+
+.padding-right {
+  padding-right: 16px; }
+
+.padding-right-only {
+  padding: 0 16px 0 0; }
+
 /* Reset */
 html,
 body,
@@ -90,6 +178,9 @@ li {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto; }
+  .main-container.progress-blured {
+    -webkit-filter: blur(2px);
+            filter: blur(2px); }
 
 .container {
   /* padding-right: 16px; */
@@ -98,20 +189,34 @@ li {
     text-align: center; }
 
 .page-title {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
   color: #225FA2;
   margin-top: 0; }
 
 .content-title {
   font-size: 16px;
   font-weight: 300;
-  color: #225FA2;
+  color: #555;
   margin-top: 0; }
+
+.info-content {
+  padding: 16px 0; }
+  .info-content > p.title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+    margin: 0; }
+  .info-content > p.info {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+    margin: 0; }
 
 a.content-link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #2260A4;
   text-transform: capitalize;
   font-weight: 300; }

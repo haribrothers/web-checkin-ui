@@ -1,5 +1,6 @@
 // angular
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
 // any operators needed throughout your application
 import './operators';
 
@@ -20,13 +21,19 @@ import { ProgressbarService } from '../shared/copa-wci/components/toolbar.servic
 })
 export class AppComponent {
   private height:number;
+  private isProgressBlured:boolean;
   constructor(
     public analytics: AnalyticsService,
     public log: LogService,
-    private appService: AppService
+    private appService: AppService,
+    private toolbarService: ProgressbarService
   ) {
     log.debug(`Config env: ${Config.ENVIRONMENT().ENV}`);
         this.height = (window.innerHeight);
+    toolbarService.showProgress$.subscribe(
+      show => {
+        this.isProgressBlured = show.progress;
+      });
 
   }
 
