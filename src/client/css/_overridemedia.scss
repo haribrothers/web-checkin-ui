@@ -11,6 +11,10 @@
 .web{
   position: relative;
   padding-bottom: 52px;
+  // display: flex;
+  // flex-direction: column;
+  // background-color: #f5f5f5;
+  // align-items: stretch;
   // background-color: #EEE;
 }
 @include web-container-height($mat-toolbar-height-desktop); // set default style

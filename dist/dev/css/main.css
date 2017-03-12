@@ -48,6 +48,11 @@
       -ms-flex-align: center;
           align-items: center; }
 
+div[fxLayout="column"] .flex-grid {
+  -webkit-flex: 1 1 auto !important;
+      -ms-flex: 1 1 auto !important;
+          flex: 1 1 auto !important; }
+
 .margin-none {
   margin: 0; }
 
@@ -177,7 +182,8 @@ li {
 .main-container {
   max-width: 960px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  width: 100%; }
   .main-container.progress-blured {
     -webkit-filter: blur(2px);
             filter: blur(2px); }
@@ -256,6 +262,49 @@ md-radio-group > label {
   font-size: 16px;
   font-weight: 700;
   vertical-align: bottom; }
+
+.message-container {
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: inset 0 4px 4px -4px rgba(0, 0, 0, 0.3), inset 0 -4px 4px -4px rgba(0, 0, 0, 0.3), 4px 0 0 0 #f5f5f5, -4px 0 0 0 #F5F5F5;
+  transition: all 250ms ease-in-out;
+  min-height: 0; }
+
+.message-container > .message {
+  display: table;
+  padding: 8px;
+  width: 100%;
+  border-bottom: 1px solid #FFF; }
+
+.message-container > .message:last-child {
+  border-bottom: none; }
+
+.message > .mat-icon {
+  display: table-cell;
+  vertical-align: middle; }
+
+.message > p {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 5px;
+  margin: 0;
+  font-size: 14px; }
+
+.message.error > p,
+.message.error > .mat-icon {
+  color: #D9534F; }
+
+.message.warning > p,
+.message.warning > .mat-icon {
+  color: #F0AD4E; }
+
+.message.info > p,
+.message.info > .mat-icon {
+  color: #337AB7; }
+
+.message-container.active {
+  padding: 0;
+  min-height: 60px; }
 
 /**
  * Applies styles for users in high contrast mode. Note that this only applies

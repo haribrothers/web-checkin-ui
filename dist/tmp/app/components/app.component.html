@@ -1,7 +1,7 @@
 <div platform (window:resize)="onResize($event)" [style.min-height.px]="height">
-  <sd-toolbar></sd-toolbar>
+  <sd-toolbar ></sd-toolbar>
   <!--<sd-navbar></sd-navbar>-->
-  <div class="main-container" [class.progress-blured]="isProgressBlured">
+  <div class="main-container" [class.progress-blured]="isProgressBlured" >
     <router-outlet></router-outlet>
   </div>
   <sd-footer></sd-footer>

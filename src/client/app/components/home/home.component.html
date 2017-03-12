@@ -30,6 +30,28 @@
   </div>
 </div>-->
 
+<div class="container">
+  <div class="flex-container with-padding-bottom" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center"
+      fxLayoutAlign.xs="start">
+      <div fxFlex class="flex-grid">
+        <div class="message-container active" >
+          <div class="message error">
+            <md-icon >error</md-icon>
+            <p>This is a error message. This will validate the errors</p>
+          </div>
+          <div class="message warning">
+            <md-icon >warning</md-icon>
+            <p>This is a warning message. This will validate the warnings</p>
+          </div>
+          <div class="message info">
+            <md-icon >info</md-icon>
+            <p>This is a warning message. This will validate the warnings</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
 <form [formGroup]="findResForm" >
   <div class="container xsmall">
     <div class="flex-container with-padding-bottom" fxLayoutGap="16px"  fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutAlign.xs="start">

@@ -1,5 +1,5 @@
 // angular
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 // any operators needed throughout your application
 import './operators';

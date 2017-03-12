@@ -9,6 +9,9 @@
     border: 1px solid #DBDAD8; }
   .mat-card.selection-card > .selection-check {
     width: 50px;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
