@@ -1,4 +1,7 @@
 <div class="message-container" [class.active]="messages.isMessage()">
+  <div class="expander">
+    <md-icon>arrow_drop_up</md-icon>
+  </div>
   <div class="message error" *ngFor="let error of messages.getErrorMessages()">
     <md-icon>error</md-icon>
     <p>{{error}}</p>
