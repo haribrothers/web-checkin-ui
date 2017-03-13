@@ -8,7 +8,7 @@ import './operators';
 import { AnalyticsService } from '../shared/analytics/index';
 import { Config, LogService, AppService } from '../shared/core/index';
 import { ProgressbarService } from '../shared/copa-wci/components/toolbar.service';
-
+import { AlertMessageService } from '../shared/copa-wci/components/alert-message.service';
 /**
  * This class represents the main application component.
  */
@@ -17,7 +17,7 @@ import { ProgressbarService } from '../shared/copa-wci/components/toolbar.servic
   selector: 'sd-app',
   templateUrl: 'app.component.html',
   changeDetection: ChangeDetectionStrategy.Default, // Everything else uses OnPush
-  providers:[ProgressbarService]
+  providers:[ProgressbarService,AlertMessageService ]
 })
 export class AppComponent {
   private height:number;

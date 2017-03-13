@@ -5,6 +5,7 @@ import {FooterComponent} from "./footer.component";
 import {Accordion, AccordionGroup} from "./accordion.component";
 import {SelectionCardComponent} from "./selection-card.component";
 import {DataFieldComponent, DataContent,DataLabel, DataSubContent} from "./data-field.component";
+import {AlertMessageComponent} from "./alert-message.component"
 
 export const COPA_WCI_COMPONENTS: any[] = [
   NavbarComponent,
@@ -17,7 +18,8 @@ export const COPA_WCI_COMPONENTS: any[] = [
   DataFieldComponent, 
   DataContent,
   DataLabel, 
-  DataSubContent
+  DataSubContent,
+  AlertMessageComponent
 ];
 
 export * from './navbar.component';
@@ -27,3 +29,4 @@ export * from './footer.component';
 export * from './accordion.component';
 export * from "./selection-card.component";
 export * from "./data-field.component";
+export * from "./alert-message.component"

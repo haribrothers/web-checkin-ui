@@ -12,6 +12,7 @@ import * as nameList from '../../shared/copa-wci/index';
 import { ToolbarComponent } from '../../shared/copa-wci/components/toolbar.component'
 import { ProgressbarService } from '../../shared/copa-wci/components/toolbar.service';
 import { Subscription } from 'rxjs/Subscription';
+import {AlertMessageService} from '../../shared/copa-wci/components/alert-message.service'
 
 declare var NSIndexPath, UITableViewScrollPosition;
 
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
   public sample: Array<string> = [];
   public findResForm: FormGroup;
 
-  constructor(private store: Store<IAppState>, fb: FormBuilder, public routerext: RouterExtensions, private toolbarService: ProgressbarService) {
+  constructor(private store: Store<IAppState>, fb: FormBuilder, public routerext: RouterExtensions, private toolbarService: ProgressbarService, private alertService: AlertMessageService) {
     this.names$ = store.let(getNames);
     this.findResForm = fb.group({
       ticket: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
@@ -69,6 +70,8 @@ export class HomeComponent implements OnInit {
   }
 
   chnagedetect() {
+    this.alertService.addErrorMessage("This is a error message. this can be repeated", true)
+    this.alertService.addWarningMessage("This is a Warning message. this can be repeated", true)
     this.toolbarService.showProgress(true);
     setTimeout(() => {
       this.toolbarService.hideProgress();

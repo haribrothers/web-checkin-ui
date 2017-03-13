@@ -1,0 +1,14 @@
+<div class="message-container" [class.active]="messages.isMessage()">
+  <div class="message error" *ngFor="let error of messages.getErrorMessages()">
+    <md-icon>error</md-icon>
+    <p>{{error}}</p>
+  </div>
+  <div class="message warning" *ngFor="let warning of messages.getWarningMessages()">
+    <md-icon>warning</md-icon>
+    <p>{{warning}}</p>
+  </div>
+  <div class="message info" *ngFor="let info of messages.getInfoMessages()">
+    <md-icon>info</md-icon>
+    <p>{{info}}</p>
+  </div>
+</div>
