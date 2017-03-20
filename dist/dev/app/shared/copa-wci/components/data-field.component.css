@@ -10,10 +10,13 @@
 .data-content {
   display: block;
   color: #1F4A7D;
-  font-size: 16px;
-  white-space: nowrap;
+  font-size: 14px;
   overflow-x: hidden;
-  text-overflow: ellipsis; }
+  word-break: break-word; }
+  .data-content.content-nowrap {
+    word-break: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
   .data-content.content-bold {
     font-weight: 700; }
   .data-content.content-upper {
@@ -25,6 +28,6 @@
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  font-size: 14px; }
+  font-size: 13px; }
 
 /*# sourceMappingURL=app/shared/copa-wci/components/data-field.component.css.map */

@@ -18,6 +18,7 @@ export class DataLabel{
     '[class.data-content]':'true',
     '[class.content-bold]':'isBold',
     '[class.content-upper]':'uppercase',
+    '[class.content-nowrap]':'!wraptext',
     '[style.color]':'contentColor'
   }
 })
@@ -25,6 +26,8 @@ export class DataContent{
   @Input() isBold:boolean = false;
   @Input() contentColor:string = '#1F4A7D';
   @Input() uppercase:boolean = true;
+  @Input() wraptext:boolean = true;
+
 }
 
 @Directive({
