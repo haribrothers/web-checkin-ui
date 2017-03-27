@@ -1,5 +1,5 @@
-<md-card class="selection-card" [class.selection-active]="checked" [class.selection-disabled]="disabled" [class.no-shadow]="!shadow">
-  <div class="selection-check" (click)="toggleSelection($event)">
+<md-card class="selection-card" tabindex="0" role="group" [attr.aria-label]="label" (keyup)="cardSelection($event)" (click)="cardSelection($event)" [class.selection-active]="checked" [class.selection-disabled]="disabled" [class.no-shadow]="!shadow">
+  <div  role="checkbox"  [attr.aria-checked]="checked ? 'true':'false'" class="selection-check" tabindex="0" (keyup)="toggleSelection($event)" (click)="toggleSelection($event)">
     <md-icon class="selection-check-icon">done</md-icon>
   </div>
   <div class="selection-content">

@@ -31,15 +31,15 @@
 						<div class="flex-container" fxLayout="row" fxLayoutAlign="center start">
 							<div fxFlex="50%" class="flex-grid">
 								<data-field>
-									<label fxHide.xs data-label>Flight</label>
-									<label data-content [isBold]="true">CM144</label>
-									<label data-sub-content>Sun 15 Jan 17</label>
+									<span fxHide.xs data-label>Flight</span>
+									<span data-content [isBold]="true">CM144</span>
+									<span data-sub-content>Sun 15 Jan 17</span>
 								</data-field>
 							</div>
 							<div fxFlex="50%" class="flex-grid">
 								<div class="data-field">
-									<label fxHide.xs data-label>Status</label>
-									<label data-content [isBold]="true" contentColor="#449C54">ON TIME</label>
+									<span fxHide.xs data-label>Status</span>
+									<span data-content [isBold]="true" contentColor="#449C54">ON TIME</span>
 								</div>
 							</div>
 						</div>
@@ -48,9 +48,9 @@
 						<div class="flex-container" fxLayout="row" fxLayoutAlign="stretch">
 							<div fxFlex="50%" class="flex-grid">
 								<data-field style="float:left">
-									<label fxHide.xs data-label>Origin</label>
-									<label data-content [isBold]="true">YUL</label>
-									<label data-sub-content>Montreal, CA</label>
+									<span fxHide.xs data-label>Origin</span>
+									<span data-content [isBold]="true">YUL</span>
+									<span data-sub-content>Montreal, CA</span>
 								</data-field>
 								<div class="flex-center" style="float:right;padding-right:16px">
 									<md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
@@ -59,9 +59,9 @@
 
 							<div fxFlex="50%" class="flex-grid">
 								<div class="data-field">
-									<label fxHide.xs class="data-label">Destination</label>
-									<label data-content [isBold]="true">PTY</label>
-									<label data-sub-content>Mexico City, MX</label>
+									<span fxHide.xs class="data-label">Destination</span>
+									<span data-content [isBold]="true">PTY</span>
+									<span data-sub-content>Mexico City, MX</span>
 								</div>
 							</div>
 						</div>
@@ -70,14 +70,14 @@
 						<div class="flex-container" fxLayout="row" fxLayoutAlign="center">
 							<div fxFlex class="flex-grid">
 								<data-field>
-									<label fxHide.xs data-label>Departure</label>
-									<label data-content>8:30 AM</label>
+									<span fxHide.xs data-label>Departure</span>
+									<span data-content>8:30 AM</span>
 								</data-field>
 							</div>
 							<div fxFlex class="flex-grid">
 								<div class="data-field">
-									<label fxHide.xs class="data-label">Arrival</label>
-									<label class="data-content">2:46 PM</label>
+									<span fxHide.xs class="data-label">Arrival</span>
+									<span class="data-content">2:46 PM</span>
 								</div>
 							</div>
 						</div>
@@ -102,26 +102,26 @@
 <div class="container">
 	<div class="flex-container with-padding-all" fxLayoutGap="4px" fxLayout="column" fxLayoutAlign="center">
 		<div fxFlex class="flex-grid">
-			<selection-card [checked]="true" [shadow]="false">
+			<selection-card [checked]="true" [shadow]="false" label="passenger RODRIGUEZDELG">
 				<div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center start">
 					<div fxFlex="25%" class="flex-grid" fxFill>
 						<data-field>
-							<label fxHide.xs data-label>Name</label>
-							<label data-content [isBold]="true">RODRIGUEZDELG</label>
+							<span fxHide.xs data-label>Name</span>
+							<span data-content [isBold]="true">RODRIGUEZDELG</span>
 						</data-field>
 					</div>
 					<div fxFlex="25%" class="flex-grid">
 						<div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
 							<div fxFlex class="flex-grid">
 								<data-field>
-									<label fxHide.xs data-label>Status</label>
-									<label class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false"><md-icon class="check-icon">check_circle</md-icon> Not Checked In</label>
+									<span fxHide.xs data-label>Status</span>
+									<span class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false"><md-icon class="check-icon">check_circle</md-icon> Not Checked In</span>
 								</data-field>
 							</div>
 							<div fxFlex class="flex-grid">
 								<data-field>
-									<label data-label>Seat</label>
-									<label data-content [isBold]="true">14A <a class="content-link" routerLink=".">Change</a></label>
+									<span data-label>Seat</span>
+									<span data-content [isBold]="true">14A <a class="content-link" routerLink=".">Change</a></span>
 								</data-field>
 							</div>
 						</div>
@@ -144,26 +144,26 @@
 			</selection-card>
 		</div>
 		<div fxFlex class="flex-grid">
-			<selection-card [checked]="true" [shadow]="false">
+			<selection-card [disabled]="true" [shadow]="false">
 				<div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start">
 					<div fxFlex="25%" class="flex-grid" fxFill>
 						<data-field >
-							<label fxHide.xs data-label>Name</label>
-							<label data-content [isBold]="true">RODRIGUEZDELG/ALFO</label>
+							<span fxHide.xs data-label>Name</span>
+							<span data-content [isBold]="true">RODRIGUEZDELG/ALFO</span>
 						</data-field>
 					</div>
 					<div fxFlex="35%" class="flex-grid">
 						<div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center">
 							<div fxFlex class="flex-grid">
 								<data-field>
-									<label fxHide.xs data-label>Status</label>
-									<label class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false"><md-icon class="check-icon">check_circle</md-icon> Not Checked In</label>
+									<span fxHide.xs data-label>Status</span>
+									<span class="flex-center" data-content [isBold]="true" contentColor="#999" [uppercase]="false"><md-icon class="check-icon">check_circle</md-icon> Not Checked In</span>
 								</data-field>
 							</div>
 							<div fxFlex class="flex-grid">
 								<data-field>
-									<label data-label>Seat</label>
-									<label data-content [isBold]="true">14A <a class="content-link" routerLink=".">Change</a></label>
+									<span data-label>Seat</span>
+									<span data-content [isBold]="true">14A <a class="content-link" routerLink=".">Change</a></span>
 								</data-field>
 							</div>
 						</div>
@@ -197,16 +197,16 @@
 							<div class="flex-container" fxLayout="row" fxLayoutAlign="center">
 								<div fxFlex="50%" class="flex-grid">
 									<data-field>
-										<label fxHide.xs data-label>Flight</label>
-										<label data-content [isBold]="true">CM144</label>
-										<label data-sub-content>Sun 15 Jan 17</label>
+										<span fxHide.xs data-label>Flight</span>
+										<span data-content [isBold]="true">CM144</span>
+										<span data-sub-content>Sun 15 Jan 17</span>
 									</data-field>
 								</div>
 								<div fxFlex="50%" class="flex-grid">
 									<div class="data-field">
-										<label fxHide.xs data-label>Status</label>
-										<label data-content [isBold]="true" contentColor="#449C54">HOLDING CONFIRMED SPACE</label>
-										<label data-sub-content>Sun 15 Jan 17</label>
+										<span fxHide.xs data-label>Status</span>
+										<span data-content [isBold]="true" contentColor="#449C54">HOLDING CONFIRMED SPACE</span>
+										<span data-sub-content>Sun 15 Jan 17</span>
 									</div>
 								</div>
 							</div>
@@ -215,9 +215,9 @@
 							<div class="flex-container" fxLayout="row" fxLayoutAlign="stretch">
 								<div fxFlex="50%" class="flex-grid">
 									<data-field style="float:left">
-										<label fxHide.xs data-label>Origin</label>
-										<label data-content [isBold]="true">YUL</label>
-										<label data-sub-content>Montreal, CA</label>
+										<span fxHide.xs data-label>Origin</span>
+										<span data-content [isBold]="true">YUL</span>
+										<span data-sub-content>Montreal, CA</span>
 									</data-field>
 									<div class="flex-center" style="float:right">
 										<md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
@@ -226,9 +226,9 @@
 
 								<div fxFlex="50%" class="flex-grid">
 									<div class="data-field">
-										<label fxHide.xs class="data-label">Destination</label>
-										<label data-content [isBold]="true">PTY</label>
-										<label data-sub-content>Mexico City, MX</label>
+										<span fxHide.xs class="data-label">Destination</span>
+										<span data-content [isBold]="true">PTY</span>
+										<span data-sub-content>Mexico City, MX</span>
 									</div>
 								</div>
 							</div>
@@ -237,14 +237,14 @@
 							<div class="flex-container" fxLayout="row" fxLayoutAlign="center">
 								<div fxFlex class="flex-grid">
 									<data-field>
-										<label fxHide.xs data-label>Departure</label>
-										<label data-content>8:30 AM</label>
+										<span fxHide.xs data-label>Departure</span>
+										<span data-content>8:30 AM</span>
 									</data-field>
 								</div>
 								<div fxFlex class="flex-grid">
 									<div class="data-field">
-										<label fxHide.xs class="data-label">Arrival</label>
-										<label class="data-content">2:46 PM</label>
+										<span fxHide.xs class="data-label">Arrival</span>
+										<span class="data-content">2:46 PM</span>
 									</div>
 								</div>
 							</div>

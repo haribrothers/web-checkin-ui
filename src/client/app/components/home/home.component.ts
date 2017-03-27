@@ -43,6 +43,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.alertService.addErrorMessage("This is a error message");
+    // this.findResForm.get('ticket').disable();
     // this.toolbarService.showProgress();
   }
 
@@ -70,19 +72,20 @@ export class HomeComponent implements OnInit {
   }
 
   chnagedetect() {
-    this.alertService.addErrorMessage("This is a error message. this can be repeated", true)
-    this.alertService.addWarningMessage("This is a Warning message. this can be repeated", true)
+    
     this.toolbarService.showProgress(true);
     setTimeout(() => {
+      this.alertService.addErrorMessage("This is a error message. this can be repeated", true)
+    this.alertService.addWarningMessage("This is a Warning message. this can be repeated", true)
       this.toolbarService.hideProgress();
-      this.routerext.navigate(['/flightPaxInfo'], {
-        transition: {
-          duration: 1000,
-          name: 'slideTop',
-        }
-      });
+      // this.routerext.navigate(['/flightPaxInfo'], {
+      //   transition: {
+      //     duration: 1000,
+      //     name: 'slideTop',
+      //   }
+      // });
 
-    }, 5000)
+    }, 2000)
 
   }
 

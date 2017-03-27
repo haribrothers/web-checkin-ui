@@ -3,7 +3,7 @@ import { Component, OnInit, Directive, ViewEncapsulation, Input } from '@angular
 
 
 @Directive({
-  selector: 'label[data-label]',
+  selector: 'span[data-label]',
   host:{
     '[class.data-label]':'true'
   }
@@ -13,7 +13,7 @@ export class DataLabel{
 }
 
 @Directive({
-  selector: 'label[data-content]',
+  selector: 'span[data-content]',
   host:{
     '[class.data-content]':'true',
     '[class.content-bold]':'isBold',
@@ -31,7 +31,7 @@ export class DataContent{
 }
 
 @Directive({
-  selector: 'label[data-sub-content]',
+  selector: 'span[data-sub-content]',
   host:{
     '[class.data-sub-content]':'true'
   },

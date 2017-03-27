@@ -1,3 +1,4 @@
+import { AriaSupport } from './aria-support.directive';
 import { NavbarComponent } from './navbar.component';
 import { ToolbarComponent } from './toolbar.component';
 import {BubbleProgressComponent} from "./bubble-progress.component";
@@ -19,7 +20,8 @@ export const COPA_WCI_COMPONENTS: any[] = [
   DataContent,
   DataLabel, 
   DataSubContent,
-  AlertMessageComponent
+  AlertMessageComponent,
+  AriaSupport
 ];
 
 export * from './navbar.component';
@@ -29,4 +31,5 @@ export * from './footer.component';
 export * from './accordion.component';
 export * from "./selection-card.component";
 export * from "./data-field.component";
-export * from "./alert-message.component"
+export * from "./alert-message.component";
+export * from './aria-support.directive';
