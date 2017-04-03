@@ -1,0 +1,185 @@
+<div class="container">
+	<div class="flex-container with-padding-all" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<h2 class="page-title">{{ 'FLIGHT_PAX_INFO' | translate }}</h2>
+			<bubble-progress [items]="['Find Reservation','Flight and Passanger Information','Seating','Summary','Boarding Pass','End']"
+			    activeIndex="1" (onNodeClick)="showAlert($event)"></bubble-progress>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="flex-container" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutAlign.xs="start">
+		<div fxFlex class="flex-grid">
+			<alert-message></alert-message>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="flex-container with-padding-horizontal" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<h2 class="content-title">{{ 'RESER_NUMBER' | translate }}<strong>7587585</strong></h2>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="flex-container with-padding-vertical" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<selection-card [checked]="true" [shadow]="false">
+				<div class="flex-container" fxLayout="row" fxLayoutGap.xs="8px" fxLayout.xs="column" fxLayoutAlign="center">
+					<div fxFlex class="flex-grid">
+						<div class="flex-container" fxLayout="row" fxLayoutAlign="center start">
+							<div fxFlex="50%" class="flex-grid">
+								<data-field>
+									<span fxHide.xs data-label>Flight</span>
+									<span data-content [isBold]="true">CM144</span>
+									<span data-sub-content>Sun 15 Jan 17</span>
+								</data-field>
+							</div>
+							<div fxFlex="50%" class="flex-grid">
+								<div class="data-field">
+									<span fxHide.xs data-label>Status</span>
+									<span data-content [isBold]="true" contentColor="#449C54">ON TIME</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div fxFlex class="flex-grid">
+						<div class="flex-container" fxLayout="row" fxLayoutAlign="stretch">
+							<div fxFlex="50%" class="flex-grid">
+								<data-field style="float:left">
+									<span fxHide.xs data-label>Origin</span>
+									<span data-content [isBold]="true">YUL</span>
+									<span data-sub-content>Montreal, CA</span>
+								</data-field>
+								<div class="flex-center" style="float:right;padding-right:16px">
+									<md-icon fxHide.gt-xs class="route-icon">local_airport</md-icon>
+								</div>
+							</div>
+
+							<div fxFlex="50%" class="flex-grid">
+								<div class="data-field">
+									<span fxHide.xs class="data-label">Destination</span>
+									<span data-content [isBold]="true">PTY</span>
+									<span data-sub-content>Mexico City, MX</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div fxFlex class="flex-grid">
+						<div class="flex-container" fxLayout="row" fxLayoutAlign="center">
+							<div fxFlex class="flex-grid">
+								<data-field>
+									<span fxHide.xs data-label>Departure</span>
+									<span data-content>8:30 AM</span>
+								</data-field>
+							</div>
+							<div fxFlex class="flex-grid">
+								<div class="data-field">
+									<span fxHide.xs class="data-label">Arrival</span>
+									<span class="data-content">2:46 PM</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</selection-card>
+		</div>
+	</div>
+</div>
+<!--<div class="hr-dashed"></div>-->
+
+
+<div class="container">
+	<div class="flex-container with-padding-vertical" fxLayoutGap="4px" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<selection-card [checked]="true" [shadow]="false" label="passenger RODRIGUEZDELG">
+				<div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center start">
+					<div fxFlex class="flex-grid" fxFill>
+						<div class="flex-container" fxLayoutGap="16px" fxLayout="row" fxLayoutAlign="center center">
+							<div fxFlex class="flex-grid">
+								<data-field>
+									<span fxHide.xs data-label>Name</span>
+									<span data-content [isBold]="true">ARANGOMUNOZ / LUISAFERNANDA</span>
+								</data-field>
+							</div>
+							<div fxFlex="60px" class="flex-grid">
+								<data-field>
+									<span data-label>Seat</span>
+									<span data-content [isBold]="true">14A</span>
+								</data-field>
+							</div>
+						</div>
+					</div>
+				</div>
+			</selection-card>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="flex-container with-padding-vertical" fxLayoutGap="4px" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<ul class="seat-indicator" tabindex="0">
+				<li>
+					<div class="seat-type-image seat-available"></div>
+					<span class="seat-type-label">Available</span>
+				</li>
+				<li>
+					<div class="seat-type-image seat-assigned"></div>
+					<span class="seat-type-label">Assigned</span>
+				</li>
+				<li>
+					<div class="seat-type-image seat-taken"></div>
+					<span class="seat-type-label">Taken</span>
+				</li>
+				<li>
+					<div class="seat-type-image seat-preferred"></div>
+					<span class="seat-type-label">Preferred</span>
+				</li>
+				<li>
+					<div class="seat-type-image seat-exitrow"></div>
+					<span class="seat-type-label">ExitRow</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="flex-container with-padding-vertical" fxLayoutGap="4px" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<div class="aircraft">
+				<div class="aircraft-cabin" *ngFor="let cabin of seatMap?.Cabins; let i = index">
+					<div class="cabin-header">{{cabin.CabinType}}</div>
+					<div class="cabin-row {{cabinRow.StyleClass}}" [class.header-row]="cabinRow.HeaderRow" *ngFor="let cabinRow of cabin?.SeatRows">
+						<div class="exit-col left" [class.wing-start]="cabinRow.RowNumber == 10" [class.wing-end]="cabinRow.RowNumber == 21" [class.wing]="cabinRow.RowNumber > 10 && cabinRow.RowNumber < 21"></div>
+						<div class="seat-row">
+							<div class="seat-container {{seat.StyleClass}}" [class.divider]="seat.MidCol" *ngFor="let seat of cabinRow?.Seats">
+								<div class="seat" *ngIf="cabinRow.HeaderRow || seat.MidCol"  >
+									{{seat.SeatNumber}}
+								</div>
+								<div class="seat" *ngIf="!cabinRow.HeaderRow && !seat.MidCol && seat.StyleClass == 'noSeat'" >
+									
+								</div>
+								<div class="seat" *ngIf="!cabinRow.HeaderRow && !seat.MidCol && seat.StyleClass != 'noSeat'" tabindex="0" [mdTooltip]="cabinRow.RowNumber+seat.SeatNumber+', '+cabin.CabinType+' Class'" mdTooltipPosition="below">
+									
+								</div>
+							</div>
+						</div>
+						<div class="exit-col right" [class.wing-start]="cabinRow.RowNumber == 10" [class.wing-end]="cabinRow.RowNumber == 21" [class.wing]="cabinRow.RowNumber > 10 && cabinRow.RowNumber < 21"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container centered">
+	<div class="flex-container with-padding-vertical" fxLayoutGap="16px" fxLayout="column" fxLayoutAlign="center">
+		<div fxFlex class="flex-grid">
+			<button md-raised-button color="primary" [routerLink]="'joinmiles'">{{ 'CONTINUE' | translate }}</button>
+			<button md-raised-button color="primary" [routerLink]="'joinmiles'">{{ 'CONTINUE' | translate }}</button>
+		</div>
+	</div>
+</div>

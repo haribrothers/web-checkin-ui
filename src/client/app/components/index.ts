@@ -6,6 +6,7 @@ import { FlightPaxInfoComponent } from './flight-pax-info/flight-pax-info.compon
 import { CheckTravelDocsComponent } from "./check-travel-docs/check-travel-docs.component"
 import { TermsComponent } from './terms/terms.component';
 import { CheckTravelComponent } from './checkTravel/checkTravel.component';
+import { AssignPaxSeatComponent } from './assign-pax-seat/assign-pax-seat.component';
 
 export const APP_COMPONENTS: any[] = [
   AppComponent,
@@ -15,7 +16,8 @@ export const APP_COMPONENTS: any[] = [
   FlightPaxInfoComponent,
   CheckTravelDocsComponent,
   TermsComponent,
-  CheckTravelComponent
+  CheckTravelComponent,
+  AssignPaxSeatComponent
 ];
 
 export * from './app.component';
@@ -25,4 +27,5 @@ export * from './joinmiles/joinmiles.component';
 export * from './flight-pax-info/flight-pax-info.component';
 export * from "./check-travel-docs/check-travel-docs.component"
 export * from './terms/terms.component';
-export * from './checkTravel/checkTravel.component'
+export * from './checkTravel/checkTravel.component';
+export * from './assign-pax-seat/assign-pax-seat.component';
