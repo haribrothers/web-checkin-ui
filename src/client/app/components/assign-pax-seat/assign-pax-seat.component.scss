@@ -18,6 +18,7 @@
 .seat-indicator>li {
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
 .seat-type-image {
@@ -29,7 +30,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  border: 1px solid #DDD
+  border: 1px solid #DDD;
+  padding: 4px;
+  color: #FFF;
 }
 
 .seat-type-image.seat-available {
@@ -168,6 +171,13 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("./assets/images/seatmap/preferred.png");
+}
+
+.seat-container.seatSelected .seat {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./assets/images/seatmap/assigned.png");
 }
 
 .cabin-row.hiderow {
